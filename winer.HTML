@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE WINNER</title>
+    <style>
+        @font-face {
+            font-family: 'IBMPlexSansHebrew-Light';
+            src: url('font/IBMPlexSansHebrew-Light.ttf') format('truetype');
+        }
+
+        #music {
+            width: 1%;
+            height: 1%;
+            visibility: hidden;
+        }
+
+        #div_win {
+            width: 100%;
+        }
+
+        body {
+            direction: rtl;
+            background-image: url('images/black2.jpg');
+            background-attachment: fixed;
+        }
+
+        #txt2 {
+            color: white;
+            font-size: 25pt;
+            text-align: center;
+            margin-top: 4%;
+            font-family: IBMPlexSansHebrew-Light;
+        }
+
+        #music1 {
+            width: 1%;
+            height: 1%;
+            visibility: hidden;
+        }
+
+        #imag {
+            width: 47%;
+            margin-right: 26%;
+            margin-top: -4%;
+              transition: transform .5s;
+        }
+
+        /*#imag:hover {
+            -ms-transform: scale(1.15);
+            -webkit-transform: scale(1.15);
+            transform: scale(4.4);
+        }*/
+
+        /*  @keyframes imag1 {
+
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(4.4);
+            }
+        }*/
+    </style>
+</head>
+
+<body>
+    <div>
+        <p id="txt2">
+        </p>
+    </div>
+    <div id="div_win">
+        <img id="imag" src="images/winer1.png" alt="winner">
+    </div>
+
+    <audio id="music" autoplay="true" muted="true" controls autoplay>
+        <source src="audio/" type="audio/mpeg">
+    </audio>
+
+    <script>
+        function animateImage() {
+            const image = document.getElementById("imag");
+            image.style.transform = "translate(0, 0)";
+            image.animate({
+                transform: "translate(200px, 0)",
+                duration: 1000,
+            });
+        }
+        window.onload = animateImage;
+        onload = () => {
+            document.getElementById("music").play();
+        }
+        let x = localStorage.getItem("counter")
+        let x1 = x.charCodeAt(0) - 96;
+        document.getElementById("txt2").innerHTML = "כל הכבוד!" + " ניצחת לאחר " + x1 + " ניסיונות"
+
+    </script>
+</body>
+
+</html>

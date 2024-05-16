@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styleSheet.css" rel="styleSheet" />
+    <title>בול פגיעה</title>
+</head>
+
+<body class="all_page">
+    <div class="main">
+        <div class="buttons">
+            <img id="img_home" src="images/home-removebg-preview.png" alt="home">
+            <img id="img_play" src="images/new_game.png" alt="play">
+            <img id="img_level" src="images/level.png" alt="level">
+            <img id="img_check" src="images/check.png" alt="check">
+            <audio id="music" controls autoplay>
+                <source src="audio/button-3.mp3" type="audio/ogg">
+                <source src="audio/button-3.mp3" type="audio/mpeg">
+            </audio>
+
+        </div>
+
+        <div class="game">
+            <div class="colors">
+                <div id="red" class="a1" draggable="true" ondragstart="dragStart(event)">
+
+                </div>
+                <div id="yellow" name="a2" draggable="true" ondragstart="dragStart(event)">
+
+                </div>
+                <div id="blue" name="a3" draggable="true" ondragstart="dragStart(event)">
+
+                </div>
+                <div id="green" name="a4" draggable="true" ondragstart="dragStart(event)">
+
+                </div>
+                <div id="pink" name="a5" draggable="true" ondragstart="dragStart(event)">
+
+                </div>
+                <div id="orange" name="a6" draggable="true" ondragstart="dragStart(event)">
+
+                </div>
+
+
+            </div>
+            <div class="game_board">
+                <table>
+                    <tr>
+                        <div class="row_in_game">
+                            <div class="all_guesses" id="all_guesses1">
+                                <span class="a" id="a" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                </span>
+                                <span class="a" id="a" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                </span>
+                                <span class="a" id="a" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                </span>
+                                <span class="a" id="a" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                </span>
+
+                            </div>
+                            <div class="all_result">
+                                <span class="resulta" id="r1">
+
+                                </span>
+                                <span class="resulta" id="r2">
+
+                                </span>
+                                <span class="resulta" id="r3">
+
+                                </span>
+                                <span class="resulta" id="r4">
+
+                                </span>
+                            </div>
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="row_in_game">
+                            <div class="all_guesses">
+                                <span class="b" id="b" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </span>
+                                <span class="b" id="b" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </span>
+                                <span class="b" id="b" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </span>
+                                <span class="b" id="b" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </span>
+
+                            </div>
+                            <div class="all_result">
+                                <span class="resultb" id="r1">
+
+                                </span>
+                                <span class="resultb" id="r2">
+
+                                </span>
+                                <span class="resultb" id="r3">
+
+                                </span>
+                                <span class="resultb" id="r4">
+
+                                </span>
+                            </div>
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="row_in_game">
+                            <div class="all_guesses">
+                                <span class="c" id="c" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </span>
+                                <span class="c" id="c" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </span>
+                                <span class="c" id="c" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </span>
+                                <span class="c" id="c" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </span>
+
+                            </div>
+                            <div class="all_result">
+                                <span class="resultc" id="r1">
+
+                                </span>
+                                <span class="resultc" id="r2">
+
+                                </span>
+                                <span class="resultc" id="r3">
+
+                                </span>
+                                <span class="resultc" id="r4">
+
+                                </span>
+                            </div>
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="row_in_game">
+                            <div class="all_guesses">
+                                <span class="d" id="d" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </span>
+                                <span class="d" id="d" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </span>
+                                <span class="d" id="d" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </span>
+                                <span class="d" id="d" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </span>
+
+                            </div>
+                            <div class="all_result">
+                                <span class="resultd" id="r1">
+
+                                </span>
+                                <span class="resultd" id="r2">
+
+                                </span>
+                                <span class="resultd" id="r3">
+
+                                </span>
+                                <span class="resultd" id="r4">
+
+                                </span>
+                            </div>
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="row_in_game">
+                            <div class="all_guesses">
+                                <span class="e" id="e" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </span>
+                                <span class="e" id="e" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </span>
+                                <span class="e" id="e" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </span>
+                                <span class="e" id="e" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </span>
+
+                            </div>
+                            <div class="all_result">
+                                <span class="resulte" id="r1">
+
+                                </span>
+                                <span class="resulte" id="r2">
+
+                                </span>
+                                <span class="resulte" id="r3">
+
+                                </span>
+                                <span class="resulte" id="r4">
+
+                                </span>
+                            </div>
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="row_in_game">
+                            <div class="all_guesses">
+                                <span class="f" id="f" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </span>
+                                <span class="f" id="f" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </span>
+                                <span class="f" id="f" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </span>
+                                <span class="f" id="f" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </span>
+
+                            </div>
+                            <div class="all_result">
+                                <span class="resultf" id="r1">
+
+                                </span>
+                                <span class="resultf" id="r2">
+
+                                </span>
+                                <span class="resultf" id="r3">
+
+                                </span>
+                                <span class="resultf" id="r4">
+
+                                </span>
+                            </div>
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="row_in_game">
+                            <div class="all_guesses">
+                                <span class="g" id="g" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </span>
+                                <span class="g" id="g" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </span>
+                                <span class="g" id="g" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </span>
+                                <span class="g" id="g" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </span>
+
+                            </div>
+                            <div class="all_result">
+                                <span class="resultg" id="r1">
+
+                                </span>
+                                <span class="resultg" id="r2">
+
+                                </span>
+                                <span class="resultg" id="r3">
+
+                                </span>
+                                <span class="resultg" id="r4">
+
+                                </span>
+                            </div>
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="row_in_game">
+                            <div class="all_guesses">
+                                <span class="h" id="h" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </span>
+                                <span class="h" id="h" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </span>
+                                <span class="h" id="h" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </span>
+                                <span class="h" id="h" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </span>
+
+                            </div>
+                            <div class="all_result">
+                                <span class="resulth" id="r1">
+
+                                </span>
+                                <span class="resulth" id="r2">
+
+                                </span>
+                                <span class="resulth" id="r3">
+
+                                </span>
+                                <span class="resulth" id="r4">
+
+                                </span>
+                            </div>
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="row_in_game">
+                            <div class="all_guesses">
+                                <span class="i" id="i" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </span>
+                                <span class="i" id="i" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </span>
+                                <span class="i" id="i" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </span>
+                                <span class="i" id="i" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </span>
+
+                            </div>
+                            <div class="all_result">
+                                <span class="resulti" id="r1">
+
+                                </span>
+                                <span class="resulti" id="r2">
+
+                                </span>
+                                <span class="resulti" id="r3">
+
+                                </span>
+                                <span class="resulti" id="r4">
+
+                                </span>
+                            </div>
+                        </div>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <script src="js.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,199 @@
+@font-face {
+    font-family: 'IBMPlexSansHebrew-Light';
+    src: url('font/IBMPlexSansHebrew-Light.ttf') format('truetype');
+}
+
+.all_page {
+    direction: rtl;
+    background-image: url('images/black2.jpg');
+    background-attachment: fixed;
+
+}
+
+#music {
+    width: 1%;
+    height: 1%;
+    visibility: hidden;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#txt {
+    font-size: 16pt;
+    text-align: center;
+    color: white;
+    margin-top: 8%;
+}
+
+.img_game {
+    height: 8vh;
+}
+
+.buttons {
+    height: 20vh;
+    margin-right: 22%;
+    background-image: url(images/black2.jpg);
+    position: fixed;
+    top: 0%;
+    width: 100%;
+
+}
+
+.game {
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.colors {
+    height: 79.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 25%;
+    position: fixed;
+    width: 9%;
+    top: 24%;
+}
+
+
+#pr {
+    font-family: IBMPlexSansHebrew-Light;
+}
+
+.game_board {
+    height: 80vh;
+    width: 100vw;
+    margin-right: 43%;
+    margin-top: -2%;
+}
+
+.colors div {
+    width: 5vw;
+    height: 10vh;
+    border-radius: 100%;
+    margin-bottom: 18%;
+}
+
+#red {
+    background-color: red;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+#green {
+    background-color: green;
+}
+
+#blue {
+    background-color: blue;
+}
+
+#pink {
+    background-color: rgb(247, 136, 154);
+}
+
+#orange {
+    background-color: orange;
+}
+
+table {
+    margin-left: 20%;
+}
+
+.row_in_game {
+    margin-bottom: 3%;
+
+}
+
+.all_result span {
+    border-radius: 2.5vw;
+    width: 2vw;
+    height: 2vw;
+    border: groove;
+    display: inline-block;
+}
+
+.all_result {
+    margin-top: 2%;
+    float: left;
+    height: 3vh;
+    width: 12%;
+    margin-left: 32%;
+}
+
+.all_guesses {
+    width: 52%;
+    display: inline-block;
+}
+
+#img_home {
+    width: 16%;
+    height: 100%;
+}
+
+#img_play {
+    width: 15%;
+    height: 100%;
+}
+
+#img_level {
+    width: 14%;
+    height: 100%;
+}
+
+#img_check {
+    width: 25%;
+    height: 100%;
+}
+
+.all_guesses span {
+    display: inline-block;
+    border: groove 7px;
+    border-radius: 100%;
+    border-color: white;
+    width: 5.5vw;
+    height: 5.5vw;
+    margin: 5px;
+}
+
+@media screen and (max-width: 1476px) {
+    .all_guesses {
+        width: 64%;
+
+    }
+
+    .all_result {
+        margin-left: 20%;
+    }
+
+
+}
+
+@media screen and (max-width: 795px) {
+    .all_guesses {
+        width: 68%;
+
+    }
+
+    .all_result {
+        margin-left: 0%;
+    }
+
+    .game_board {
+        margin-right: 30%;
+    }
+
+    .colors {
+        margin-right: 12%;
+    }
+
+
+}
